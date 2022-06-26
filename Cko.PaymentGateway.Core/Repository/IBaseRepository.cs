@@ -8,12 +8,11 @@ namespace Cko.PaymentGateway.Core.Repository
 {
     public interface IBaseRepository<T> where T : class
     {
-        Task Save(T transaction);
-        Task<T> GetById(Guid id);
-        Task<T> Update(Guid id, T transaction);
-        Task Delete(Guid id);
-        Task<IEnumerable<T>> GetAll();
-        Task<IEnumerable<T>> GetAll(int? pageSize = null, int? page = null);
-        Task<IEnumerable<T>> GetByDateRange (DateTime? startDate, DateTime? endDate);  
+        void Add(T transaction);
+        IAsyncEnumerable<T> GetAllAsync();
+        IAsyncEnumerable<T> GetAllAsync(int? pageSize = null, int? page = null);
+        Task<T> GetByIdAsync(Guid id);
+        void Remove(T entity);
+        void Update(Guid id, T transaction);
     }
 }
