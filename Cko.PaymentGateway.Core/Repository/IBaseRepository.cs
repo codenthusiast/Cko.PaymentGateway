@@ -11,7 +11,7 @@ namespace Cko.PaymentGateway.Core.Repository
         void Add(T transaction);
         IAsyncEnumerable<T> GetAllAsync();
         IAsyncEnumerable<T> GetAllAsync(int? pageSize = null, int? page = null);
-        Task<T?> GetByIdAsync(Guid id);
+        Task<T> GetByIdAsync(Guid id);
         void Remove(T entity);
         void Update(Guid id, T transaction);
     }

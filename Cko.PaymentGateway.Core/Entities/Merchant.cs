@@ -9,7 +9,7 @@ namespace Cko.PaymentGateway.Core.Entities
         public Guid Id { get; set; }
         public int BusinessName { get; set; }
         public DateTime Created { get; set; }
-        public ICollection<Customer> Customers { get; set; }
+        //public ICollection<Customer> Customers { get; set; }
         public ICollection<Transaction> Transactions { get; set; }
     }
 }

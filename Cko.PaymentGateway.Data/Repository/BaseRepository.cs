@@ -36,7 +36,7 @@ namespace Cko.PaymentGateway.Data.Repository
             return query.AsAsyncEnumerable();
         }
 
-        public Task<T?> GetByIdAsync(Guid id)
+        public Task<T> GetByIdAsync(Guid id)
         {
             var entity =  _dbContext.Set<T>().FindAsync(id);
             return entity.AsTask();
