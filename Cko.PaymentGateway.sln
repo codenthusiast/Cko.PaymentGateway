@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cko.PaymentGateway.Data.Uni
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cko.PaymentGateway.Service", "Cko.PaymentGateway.Service\Cko.PaymentGateway.Service.csproj", "{806B21D8-D418-4185-A4A8-12D1D2D315F2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cko.PaymentGateway.Service.UnitTests", "Cko.PaymentGateway.Service.UnitTests\Cko.PaymentGateway.Service.UnitTests.csproj", "{AFDC85B6-5D0F-4D3C-8F6F-5B147E6D6BC3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{806B21D8-D418-4185-A4A8-12D1D2D315F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{806B21D8-D418-4185-A4A8-12D1D2D315F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{806B21D8-D418-4185-A4A8-12D1D2D315F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFDC85B6-5D0F-4D3C-8F6F-5B147E6D6BC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFDC85B6-5D0F-4D3C-8F6F-5B147E6D6BC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFDC85B6-5D0F-4D3C-8F6F-5B147E6D6BC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFDC85B6-5D0F-4D3C-8F6F-5B147E6D6BC3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
