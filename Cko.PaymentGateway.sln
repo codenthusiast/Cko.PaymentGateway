@@ -5,6 +5,8 @@ VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cko.PaymentGateway.Core", "Cko.PaymentGateway.Core\Cko.PaymentGateway.Core.csproj", "{23BEAED1-3B05-4AB9-BF80-7EFF228D1FF3}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cko.PaymentGateway.Data", "Cko.PaymentGateway.Data\Cko.PaymentGateway.Data.csproj", "{ED35B7C5-0361-484D-A0CE-0B1629A13BFE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{23BEAED1-3B05-4AB9-BF80-7EFF228D1FF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23BEAED1-3B05-4AB9-BF80-7EFF228D1FF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23BEAED1-3B05-4AB9-BF80-7EFF228D1FF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED35B7C5-0361-484D-A0CE-0B1629A13BFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED35B7C5-0361-484D-A0CE-0B1629A13BFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED35B7C5-0361-484D-A0CE-0B1629A13BFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED35B7C5-0361-484D-A0CE-0B1629A13BFE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

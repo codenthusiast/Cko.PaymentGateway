@@ -8,8 +8,9 @@ namespace Cko.PaymentGateway.Core.Repository
 {
     public interface IUnitOfWork
     {
-        IBaseRepository<Transaction> TransactionRepository { get; set; }
+        IBaseRepository<Transaction> TransactionRepository { get; }
+        IBaseRepository<Merchant> MerchantRepository { get; }
         void Dispose();
-        Task Save();
+        Task SaveAsync();
     }
 }
