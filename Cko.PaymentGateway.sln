@@ -7,11 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cko.PaymentGateway.Core", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cko.PaymentGateway.Data", "Cko.PaymentGateway.Data\Cko.PaymentGateway.Data.csproj", "{ED35B7C5-0361-484D-A0CE-0B1629A13BFE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cko.PaymentGateway.Data.UnitTests", "Cko.PaymentGateway.UnitTests\Cko.PaymentGateway.Data.UnitTests.csproj", "{78A8CD0D-F4BE-46F2-89FD-D1D15EEC068B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cko.PaymentGateway.Data.UnitTests", "Cko.PaymentGateway.UnitTests\Cko.PaymentGateway.Data.UnitTests.csproj", "{78A8CD0D-F4BE-46F2-89FD-D1D15EEC068B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cko.PaymentGateway.Service", "Cko.PaymentGateway.Service\Cko.PaymentGateway.Service.csproj", "{806B21D8-D418-4185-A4A8-12D1D2D315F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cko.PaymentGateway.Service", "Cko.PaymentGateway.Service\Cko.PaymentGateway.Service.csproj", "{806B21D8-D418-4185-A4A8-12D1D2D315F2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cko.PaymentGateway.Service.UnitTests", "Cko.PaymentGateway.Service.UnitTests\Cko.PaymentGateway.Service.UnitTests.csproj", "{AFDC85B6-5D0F-4D3C-8F6F-5B147E6D6BC3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cko.PaymentGateway.Service.UnitTests", "Cko.PaymentGateway.Service.UnitTests\Cko.PaymentGateway.Service.UnitTests.csproj", "{AFDC85B6-5D0F-4D3C-8F6F-5B147E6D6BC3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cko.BankSimulator", "Cko.BankSimulator\Cko.BankSimulator.csproj", "{B3F89284-45C8-47F4-9207-D2B5EFEA4210}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{AFDC85B6-5D0F-4D3C-8F6F-5B147E6D6BC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AFDC85B6-5D0F-4D3C-8F6F-5B147E6D6BC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AFDC85B6-5D0F-4D3C-8F6F-5B147E6D6BC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3F89284-45C8-47F4-9207-D2B5EFEA4210}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3F89284-45C8-47F4-9207-D2B5EFEA4210}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3F89284-45C8-47F4-9207-D2B5EFEA4210}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3F89284-45C8-47F4-9207-D2B5EFEA4210}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
