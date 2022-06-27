@@ -68,7 +68,7 @@ namespace Cko.PaymentGateway.Service.UnitTests
 
             Mock.Get(_unitOfWork).Setup(x => x.TransactionRepository)
                       .Returns(_transactionRepository);
-            Mock.Get(_bankClient).Setup(x => x.ProcessCardTransaction(It.IsAny<CardPaymentDTO>()))
+            Mock.Get(_bankClient).Setup(x => x.ProcessCardTransaction(It.IsAny<CardPaymenRequestDTO>()))
                 .ReturnsAsync(responseFromBank);
             var response = await _sut.ProcessCardPayment(request);
 
