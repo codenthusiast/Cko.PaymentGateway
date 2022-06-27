@@ -36,7 +36,7 @@ namespace Cko.PaymentGateway.Service.Services
 
         public async Task<ProcessPaymentResponse> ProcessCardPayment(CardPaymentRequest request)
         {
-            var dto = new CardPaymentDTO
+            var dto = new CardPaymenRequestDTO
             {
                 CardNumber = request.CardNumber,
                 Cvv = request.Cvv,

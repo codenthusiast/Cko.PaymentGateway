@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Cko.PaymentGateway.Service.DTOs
 {
-    public class CardPaymentDTO
+    public class CardPaymenRequestDTO
     {
         public string CardNumber { get; set; }
         public string ExpiryMonth { get; set; }

@@ -9,6 +9,6 @@ namespace Cko.PaymentGateway.Service.ThirdParty
 {
     public interface IAcquiringBankClient
     {
-        public Task<CardPaymentReponseDTO> ProcessCardTransaction(CardPaymentDTO request);
+        public Task<CardPaymentReponseDTO> ProcessCardTransaction(CardPaymenRequestDTO request);
     }
 }
