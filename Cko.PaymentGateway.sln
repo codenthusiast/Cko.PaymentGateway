@@ -13,7 +13,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cko.PaymentGateway.Service"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cko.PaymentGateway.Service.UnitTests", "Cko.PaymentGateway.Service.UnitTests\Cko.PaymentGateway.Service.UnitTests.csproj", "{AFDC85B6-5D0F-4D3C-8F6F-5B147E6D6BC3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cko.BankSimulator", "Cko.BankSimulator\Cko.BankSimulator.csproj", "{B3F89284-45C8-47F4-9207-D2B5EFEA4210}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cko.BankSimulator", "Cko.BankSimulator\Cko.BankSimulator.csproj", "{B3F89284-45C8-47F4-9207-D2B5EFEA4210}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cko.PaymentGateway.WebApi", "Cko.PaymentGateway.WebApi\Cko.PaymentGateway.WebApi.csproj", "{A0721DC5-82DD-4126-910C-E02103AA0BF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cko.PaymentGateway.WebApi.UnitTests", "Cko.PaymentGateway.WebApi.UnitTests\Cko.PaymentGateway.WebApi.UnitTests.csproj", "{B2B655CD-E963-414A-93CF-3A4F0FB3A70C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +49,14 @@ Global
 		{B3F89284-45C8-47F4-9207-D2B5EFEA4210}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3F89284-45C8-47F4-9207-D2B5EFEA4210}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3F89284-45C8-47F4-9207-D2B5EFEA4210}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0721DC5-82DD-4126-910C-E02103AA0BF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0721DC5-82DD-4126-910C-E02103AA0BF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0721DC5-82DD-4126-910C-E02103AA0BF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0721DC5-82DD-4126-910C-E02103AA0BF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2B655CD-E963-414A-93CF-3A4F0FB3A70C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2B655CD-E963-414A-93CF-3A4F0FB3A70C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2B655CD-E963-414A-93CF-3A4F0FB3A70C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2B655CD-E963-414A-93CF-3A4F0FB3A70C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

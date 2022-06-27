@@ -5,8 +5,6 @@ using Cko.PaymentGateway.Core.Repository;
 using Cko.PaymentGateway.Service.DTOs;
 using Cko.PaymentGateway.Service.ThirdParty;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Cko.PaymentGateway.Service.Services
@@ -57,7 +55,7 @@ namespace Cko.PaymentGateway.Service.Services
                 CustomerEmail = request.CustomerEmail,
                 DateCreated = DateTimeOffset.UtcNow,
                 ExternalReference = request.ExternalReference,
-                TransactionStatus = response.Status,
+                Status = response.Status,
             };
             _unitOfWork.TransactionRepository.Add(transaction);
             await _unitOfWork.SaveAsync();
