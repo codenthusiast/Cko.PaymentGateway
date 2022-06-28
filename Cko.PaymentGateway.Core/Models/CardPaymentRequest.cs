@@ -6,7 +6,6 @@ namespace Cko.PaymentGateway.Core.Models
     {
         [Required]
         [CreditCard]
-        [RegularExpression(@"^\d{16}$", ErrorMessage = "Invalid card number")]
         public string CardNumber { get; set; }
         [Required]
         [RegularExpression("0[1-9]|1[0-2]", ErrorMessage = "Invalid expiry month")]        
