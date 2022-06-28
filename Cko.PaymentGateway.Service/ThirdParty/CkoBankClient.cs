@@ -25,7 +25,11 @@ namespace Cko.PaymentGateway.Service.ThirdParty
             if (response.IsSuccessStatusCode || response.StatusCode == System.Net.HttpStatusCode.BadRequest)
             {
                 var responseString = await response.Content.ReadAsStringAsync();
-                return JsonSerializer.Deserialize<CardPaymentReponseDTO>(responseString);
+                JsonSerializerOptions options = new JsonSerializerOptions
+                {
+                    PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+                };
+                return JsonSerializer.Deserialize<CardPaymentReponseDTO>(responseString, options);
             }
             throw new HttpRequestException(response.ReasonPhrase);
         }

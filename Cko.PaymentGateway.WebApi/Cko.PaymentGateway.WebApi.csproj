@@ -5,16 +5,19 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
-    <UserSecretsId>7c494966-0538-427d-b880-e2256f28c0f6</UserSecretsId>
+    <UserSecretsId>b3287a63-5273-42c5-b784-aefe8435bca1</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.14.0" />
+    <PackageReference Include="MySql.EntityFrameworkCore" Version="6.0.1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Cko.PaymentGateway.Core\Cko.PaymentGateway.Core.csproj" />
+    <ProjectReference Include="..\Cko.PaymentGateway.Data\Cko.PaymentGateway.Data.csproj" />
     <ProjectReference Include="..\Cko.PaymentGateway.Service\Cko.PaymentGateway.Service.csproj" />
   </ItemGroup>
 
