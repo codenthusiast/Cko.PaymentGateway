@@ -35,7 +35,7 @@ namespace Cko.PaymentGateway.WebApi.Controllers
             if (response.IsApproved)
             {
                 _logger.LogInformation("Payment approved ref: {paymentRef}", request.ExternalReference);
-                return CreatedAtRoute(null, response);
+                return CreatedAtRoute(nameof(Status), response);
             }
             else
             {
@@ -45,11 +45,11 @@ namespace Cko.PaymentGateway.WebApi.Controllers
         }
 
 
-        [HttpPost]
+        [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        [Route("status")]
+        [Route("status", Name = nameof(Status))]
         public async Task<IActionResult> Status(Guid id)
         {
             try
