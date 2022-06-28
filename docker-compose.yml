@@ -1,0 +1,37 @@
+version: '3.4'
+
+services:
+  cko-paymentgateway-webapi:
+    image: ${DOCKER_REGISTRY-}ckopaymentgatewaywebapi
+    build:
+      context: .
+      dockerfile: Cko.PaymentGateway.WebApi/Dockerfile
+    ports:
+        - "5080:80"
+    depends_on:
+        - db
+    environment:
+        - MYSQL_CONN_STRING
+
+  cko-banksimulator:
+    image: ${DOCKER_REGISTRY-}ckobanksimulator
+    build:
+      context: .
+      dockerfile: Cko.BankSimulator/Dockerfile
+    ports:
+        - "5081:80"
+  db:
+    image: mysql
+    ports:
+        - "3306:3306"
+    volumes:
+        - dbdata:/var/lib/mysql
+
+    environment:
+        - MYSQL_ROOT_PASSWORD
+        - MYSQL_DATABASE
+        - MYSQL_USER
+        - MYSQL_PASSWORD
+    restart: always
+volumes: 
+    dbdata:

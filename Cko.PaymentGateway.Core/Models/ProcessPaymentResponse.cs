@@ -14,20 +14,21 @@ namespace Cko.PaymentGateway.Core.Models
         public DateTimeOffset DateCreated { get; set; }
         public string PaymentType { get; set; }
         public bool IsApproved { get; set; }
+        public decimal Amount { get; set; }
+        public string Currency { get; set; }
 
-        public static ProcessPaymentResponse CreateResponseFromEntity(Transaction transaction)
+        public ProcessPaymentResponse(Transaction transaction)
         {
-            var response = new ProcessPaymentResponse
-            {
-                TransactionReference = transaction.Id,
-                ExternalReference = transaction.ExternalReference,
-                CardNumber = transaction.CardNumber,
-                Status = transaction.Status,
-                DateCreated = transaction.DateCreated,
-                IsApproved = transaction.Status == "approved"
-            };
 
-            return response;
+            TransactionReference = transaction.Id;
+            ExternalReference = transaction.ExternalReference;
+            CardNumber = transaction.CardNumber;
+            Status = transaction.Status;
+            DateCreated = transaction.DateCreated;
+            IsApproved = transaction.Status == "approved";
+            Amount = transaction.Amount;
+            Currency = transaction.Currency;
+            PaymentType = transaction.PaymentType;
         }
     }
 }

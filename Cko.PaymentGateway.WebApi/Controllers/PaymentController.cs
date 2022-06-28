@@ -1,4 +1,5 @@
-﻿using Cko.PaymentGateway.Core.Contracts;
+﻿using Cko.PaymentGateway.Core.AppExceptions;
+using Cko.PaymentGateway.Core.Contracts;
 using Cko.PaymentGateway.Core.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -25,6 +26,10 @@ namespace Cko.PaymentGateway.WebApi.Controllers
         [Route("process")]
         public async Task<IActionResult> Process(CardPaymentRequest request)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
             _logger.LogInformation("Initiating payment request ref: {paymentRef}", request.ExternalReference);
             var response = await _paymentService.ProcessCardPayment(request);
             if (response.IsApproved)
@@ -47,14 +52,17 @@ namespace Cko.PaymentGateway.WebApi.Controllers
         [Route("status")]
         public async Task<IActionResult> Status(Guid id)
         {
-            var response = await _paymentService.GetPaymentStatus(id);
-
-            if(response == null)
+            try
             {
+                var response = await _paymentService.GetPaymentStatus(id);
+                return Ok(response);
+            }
+            catch (PaymentNotFoundException ex)
+            {
+                _logger.LogError("Payment not found", ex);
                 return NotFound();
             }
 
-            return Ok(response);
         }
     }
 }

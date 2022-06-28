@@ -15,7 +15,6 @@ namespace Cko.PaymentGateway.Core.Entities
         public string CardNumber { get; set; }
         public decimal Amount { get; set; }
         public string Currency { get; set; }
-        public Guid MerchantId { get; set; }
-        public Merchant Merchant { get; set; }
+        public string PaymentType { get; set; }
     }
 }

@@ -9,6 +9,7 @@ using Xunit;
 using FluentAssertions;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using Cko.PaymentGateway.Core.AppExceptions;
 
 namespace Cko.PaymentGateway.WebApi.UnitTests
 {
@@ -85,10 +86,10 @@ namespace Cko.PaymentGateway.WebApi.UnitTests
         }
 
         [Fact]
-        public async Task Return_NotFound_When_PaymentIsNotFound()
+        public async Task Return_NotFound_When_PaymentNotFoundException_IsThrown()
         {
 
-            Mock.Get(_paymentService).Setup(x => x.GetPaymentStatus(It.IsAny<Guid>())).ReturnsAsync(default(ProcessPaymentResponse));
+            Mock.Get(_paymentService).Setup(x => x.GetPaymentStatus(It.IsAny<Guid>())).ThrowsAsync(new PaymentNotFoundException());
             var response = await _sut.Status(Guid.NewGuid());
 
             response.As<NotFoundResult>()

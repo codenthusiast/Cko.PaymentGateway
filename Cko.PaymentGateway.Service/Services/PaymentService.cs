@@ -29,7 +29,7 @@ namespace Cko.PaymentGateway.Service.Services
                 throw new PaymentNotFoundException();
             }
 
-            return ProcessPaymentResponse.CreateResponseFromEntity(transaction);
+            return new ProcessPaymentResponse(transaction);
         }
 
         public async Task<ProcessPaymentResponse> ProcessCardPayment(CardPaymentRequest request)
@@ -57,10 +57,11 @@ namespace Cko.PaymentGateway.Service.Services
                 ExternalReference = request.ExternalReference,
                 Status = response.Status,
             };
+
             _unitOfWork.TransactionRepository.Add(transaction);
             await _unitOfWork.SaveAsync();
 
-            return ProcessPaymentResponse.CreateResponseFromEntity(transaction);
+            return new ProcessPaymentResponse(transaction);
         }
     }
 }
