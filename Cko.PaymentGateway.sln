@@ -20,6 +20,7 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cko.PaymentGateway.WebApi.UnitTests", "Cko.PaymentGateway.WebApi.UnitTests\Cko.PaymentGateway.WebApi.UnitTests.csproj", "{B2B655CD-E963-414A-93CF-3A4F0FB3A70C}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{F020AC96-2DD4-4DE2-8FE8-614264323656}"
+
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +64,7 @@ Global
 		{F020AC96-2DD4-4DE2-8FE8-614264323656}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F020AC96-2DD4-4DE2-8FE8-614264323656}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F020AC96-2DD4-4DE2-8FE8-614264323656}.Release|Any CPU.Build.0 = Release|Any CPU
+
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
